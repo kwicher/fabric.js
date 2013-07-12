@@ -3284,9 +3284,9 @@ fabric.util.string = {
       /**
       * by kwicher - makes it work in scrolling divs
       */
-      else if (element === fabric.document ) {
-        scrollLeft = body.scrollLeft || docElement.scrollLeft || 0;
-        scrollTop = body.scrollTop ||  docElement.scrollTop || 0;
+      else if (element === fabric.document && orgElement===upperCanvasEl ) {
+        scrollLeft = body.scrollLeft || docElement.scrollLeft || upperCanvasEl.scrollLeft || 0;
+        scrollTop = body.scrollTop ||  docElement.scrollTop || upperCanvasEl.scrollTop || 0;
       }
       //end
       else {
